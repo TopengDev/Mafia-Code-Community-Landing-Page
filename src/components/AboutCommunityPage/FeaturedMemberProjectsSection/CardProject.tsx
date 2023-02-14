@@ -24,7 +24,7 @@ const CardProject: FC = () => (
         <div className="avatar">
           <div className="w-10 rounded-full">
             <Image
-              src="https://source.unsplash.com/random/40x40/?face"
+              src="https://source.unsplash.com/random/45x45/?face"
               alt="Avatar"
               width={40}
               height={40}

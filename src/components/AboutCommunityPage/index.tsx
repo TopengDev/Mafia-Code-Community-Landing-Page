@@ -1,4 +1,7 @@
 import HeadCoverSection from "./HeadCoverSection";
+
 import FeaturedMemberProjectsSection from "./FeaturedMemberProjectsSection";
 
-export { HeadCoverSection, FeaturedMemberProjectsSection }
+import { MissionSection } from "./MissionSection";
+
+export { HeadCoverSection, FeaturedMemberProjectsSection, MissionSection };

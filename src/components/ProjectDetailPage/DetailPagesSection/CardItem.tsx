@@ -2,28 +2,46 @@ import { type FC } from "react";
 import Image from "next/image";
 
 type CardItemProps = {
-    title: string;
-    desc: string;
-    srcImg: string;
-}
+  title: string;
+  desc: string;
+  srcImg: string;
+  isImgRight?: boolean;
+};
 
-const CardItem: FC<CardItemProps> = ({ title, desc, srcImg }) => {
-    return (
-        <div className="grid grid-flow-col grid-cols-2 place-content-center items-center">
-            <div className="mockup-phone">
-                <div className="camera" />
-                <div className="display">
-                    <div className="artboard artboard-demo phone-1 !w-52 !h-[27rem]">
-                        <Image src={srcImg} className="h-full w-full" width={300} height={600} alt="Preview Image" />
-                    </div>
-                </div>
+const CardItem: FC<CardItemProps> = ({
+  title,
+  desc,
+  srcImg,
+  isImgRight = false,
+}) => {
+  return (
+    <div
+      className={`${
+        isImgRight ? "flex-row-reverse" : ""
+      } flex items-center px-20`}
+    >
+      <div className="grid w-1/2 place-items-center">
+        <div className="mockup-phone">
+          <div className="camera" />
+          <div className="display">
+            <div className="phone-1 artboard artboard-demo !h-[27rem] !w-52">
+              <Image
+                src={srcImg}
+                className="h-full w-full"
+                width={300}
+                height={600}
+                alt="Preview Image"
+              />
             </div>
-            <div className="text-neutral-50 pr-10">
-                <h1 className="text-3xl font-bold mb-2">{title}</h1>
-                <p className="text-lg">{desc}</p>
-            </div>
+          </div>
         </div>
-    )
-}
+      </div>
+      <div className="w-1/2 pr-10 text-neutral-50">
+        <h1 className="mb-2 text-3xl font-bold">{title}</h1>
+        <p className="text-lg">{desc}</p>
+      </div>
+    </div>
+  );
+};
 
 export default CardItem;

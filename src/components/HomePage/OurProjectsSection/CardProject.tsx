@@ -30,11 +30,11 @@ const CardProject: FC<CardProjectProps> = ({ title, desc, badge }) => {
             height={520}
           />
         </CarouselContent>
-        <div className=" rounded-b-[2.5rem] py-7 px-6 bg-[#242529] opacity-80">
+        <div className=" rounded-b-[2.5rem] bg-[#242529] py-7 px-6 opacity-80">
           <Link
             href={{
-              pathname: "/projects/[name-project]",
-              query: { "name-project": "Moris" },
+              pathname: "/projects/[name_project]",
+              query: { name_project: "Moris" },
             }}
             className="link-hover text-lg font-bold text-white md:text-xl xl:text-2xl"
           >

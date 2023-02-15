@@ -4,10 +4,10 @@ import {
   HeadCoverSection,
   MockupSection,
   ProjectTimeline,
-  PageDetailsSection,
+  DetailPagesSection,
   PresentationVideoSection,
   ContributorSection,
-  TechStackSection
+  TechStackSection,
 } from "@/components/ProjectDetailPage";
 import { useRouter } from "next/router";
 
@@ -20,7 +20,7 @@ const Project: NextPage = () => {
       <HeadCoverSection />
       <MockupSection />
       <ProjectTimeline />
-      <PageDetailsSection />
+      <DetailPagesSection />
       <PresentationVideoSection />
       <ContributorSection />
       <TechStackSection />

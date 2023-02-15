@@ -13,7 +13,7 @@ const CarouselItem: FC<CarouselItemProps> = ({ children }) => {
   const { name_project } = router.query;
 
   return (
-    <article className="bg-glass-gray-100 rounded-3xl py-6 px-8">
+    <article className="bg-glass-gray-100 w-[90vw] rounded-3xl py-6 px-8">
       <Link
         href={`/projects/${name_project}/detail-pages`}
         className="link-hover flex justify-end text-primary-500"
